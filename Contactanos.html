@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Netflix – contacto y soporte">
+    <meta name="keywords" content="Netflix, contacto, películas, series, anime">
+    <meta name="author" content="Hellen Merry Solis Cuba">
+
+    <link rel="icon" href="img/netflix_ico.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <title>Contáctanos</title>
+</head>
+
+<body class="page-contacto">
+
+<main class="main">
+
+    <section class="section-1">
+
+        <header class="header">
+
+            <div class="img">
+                <img src="img/img_netflix.jpg" alt="Logo de Netflix">
+            </div>
+
+            <nav class="menu" aria-label="Principal">
+
+                <a href="index.html">Inicio</a>
+                <a href="Novedades_Populares.html">Novedades Populares</a>
+                <a href="estrenos.html">Próximos Estrenos</a>
+                <a href="contactanos.html" aria-current="page">Contáctanos</a>
+
+            </nav>
+
+        </header>
+
+    </section>
+
+    <section class="contacto-banner">
+
+        <div class="contacto-overlay">
+
+            <div class="contacto-texto">
+
+                <h1 class="titulo-contacto">
+                    CONTÁCTANOS
+                </h1>
+
+                <p class="subtitulo-contacto">
+                    Revisa nuestros horarios de atención y déjanos un mensaje.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="contacto-contenido">
+
+        <div class="bloque-contacto">
+
+            <div class="bloque-izq">
+
+                <h2>
+                    Horarios
+                </h2>
+
+                <table class="tabla-contacto" aria-describedby="desc-tabla-contacto">
+
+                    <caption id="desc-tabla-contacto">
+                        Atención de Lunes a Domingo
+                    </caption>
+
+                    <thead>
+
+                        <tr>
+
+                            <th scope="col">Día</th>
+                            <th scope="col">Horario</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>Lunes a Viernes</td>
+                            <td>09:00 – 18:00</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Sábado</td>
+                            <td>10:00 – 16:00</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Domingo</td>
+                            <td>10:00 – 14:00</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div class="bloque-der">
+
+                <h2>
+                    Escríbenos
+                </h2>
+
+                <form class="form-contacto form-contacto--inline" onsubmit="return handleSubmit(event)" novalidate>
+
+                    <p class="form-req">
+                        * Datos requeridos
+                    </p>
+
+                    <div class="fila">
+
+                        <label for="nombre">
+                            Nombres:
+                        </label>
+
+                        <div class="control">
+
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej. Hellen Merry" required>
+
+                        </div>
+
+                    </div>
+
+                    <div class="fila">
+
+                        <label for="apellido">
+                            Apellidos:
+                        </label>
+
+                        <div class="control">
+
+                            <input type="text" id="apellido" name="apellido" placeholder="Ej. Solis Cuba" required>
+
+                        </div>
+
+                    </div>
+
+                    <div class="fila">
+
+                        <label for="correo">
+                            Email:
+                        </label>
+
+                        <div class="control">
+
+                            <input type="email" id="correo" name="correo" placeholder="name@something.com" required>
+
+                            <span class="hint hint-email">
+                                Formato correcto: "name@something.com"
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="fila">
+
+                        <label for="web">
+                            Sitio Web:
+                        </label>
+
+                        <div class="control">
+
+                            <input type="url" id="web" name="web" placeholder="http://tusitio.com" required pattern="http://.+" title="Debe comenzar con http://">
+
+                            <span class="hint hint-web">
+                                Formato correcto: "http://tusitio.com"
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="fila">
+
+                        <label for="mensaje">
+                            Mensaje:
+                        </label>
+
+                        <div class="control">
+
+                            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+                        </div>
+
+                    </div>
+
+                    <div class="fila fila-submit">
+
+                        <button type="submit" class="btn-contacto">
+                            Enviar mensaje
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="section-3">
+
+        <footer class="footer">
+
+            <a href="#">
+                Preguntas frecuentes
+            </a>
+
+            <a href="#">
+                Privacidad
+            </a>
+
+            <a href="#">
+                Términos
+            </a>
+
+            <a href="#">
+                Contáctanos
+            </a>
+
+            <p class="autor">
+                © 2026 Hellen Merry Solis Cuba
+            </p>
+
+        </footer>
+
+    </section>
+
+</main>
+
+<script>
+
+function handleSubmit(e){
+
+    const f = e.target;
+
+    if(!f.checkValidity()){
+
+        f.reportValidity();
+
+        return false;
+    }
+
+    e.preventDefault();
+
+    alert("Formulario enviado correctamente");
+
+    f.reset();
+
+    return false;
+}
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
