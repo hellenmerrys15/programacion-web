@@ -28,6 +28,7 @@
         <a href="index.html">Inicio</a>
         <a href="Novedades_Populares.html" aria-current="page">Novedades Populares</a>
         <a href="estrenos.html">Próximos Estrenos</a>
+        <a href="Mi_Lista.html">Mi Lista</a>
         <a href="contactanos.html">Contáctanos</a>
       </nav>
 
@@ -246,26 +247,7 @@
 
 </main>
 
-<script>
-
-const grids = document.querySelectorAll('.simu-grid');
-const izquierdas = document.querySelectorAll('.izquierda');
-const derechas = document.querySelectorAll('.derecha');
-
-grids.forEach((grid, index) => {
-
-    derechas[index].addEventListener('click', () => {
-        grid.scrollLeft += 800;
-    });
-
-    izquierdas[index].addEventListener('click', () => {
-        grid.scrollLeft -= 800;
-    });
-
-});
-
-</script>
-
+<script src="js/novedades.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
